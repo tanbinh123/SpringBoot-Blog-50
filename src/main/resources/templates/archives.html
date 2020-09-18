@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>归档</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+    <!--导航-->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">Blog</h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="small home icon"></i>首页 </a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="small idea icon"></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="small tags icon"></i>标签</a>
+                <a href="#" class="active m-item item m-mobile-hide"><i class="small clone icon"></i>归档</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="small info icon"></i>关于我</a>
+                <div class="m-item right item m-mobile-hide">
+                    <div class="ui inverted transparent input">
+                        <input type="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="menu toggle ui black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--中间内容-->
+    <div class="m-container m-padded-tb-big">
+        <div class="ui m-container">
+            <!--header-->
+            <div class="ui top padded attached segment">
+                <div class="ui middle aligned two column grid">
+                    <div class="column">
+                        <h3 class="ui teal header">归档</h3>
+                    </div>
+                    <div class="right aligned column">
+                        共 <h2  class="ui orange header m-inline-block m-text-thin"> 103 </h2> 篇博客
+                    </div>
+                </div>
+            </div>
+            <!-- 历史博客 -->
+            <h2 class="ui center aligned header yellow">2020</h2>
+            <div class="ui fluid vertical menu">
+                <a href="#" target="_blank" class="item">
+                    <span>
+                        <i class="small teal circle icon"></i>Java 8 实战
+                        <div class="ui teal basic left pointing label mini">9月1号</div>
+                    </span>
+                    <div class="ui violet basic right label">原创</div>
+                </a>
+                <a href="#" target="_blank" class="item">
+                    <span>
+                        <i class="small teal circle icon"></i>MySql 进阶篇：索引优化
+                        <div class="ui teal basic left pointing label mini">8月15号</div>
+                    </span>
+                    <div class="ui violet basic right label">原创</div>
+                </a>
+                <a href="#" target="_blank" class="item">
+                    <span>
+                        <i class="small teal circle icon"></i>SpringBoot 自动配置原理解析
+                        <div class="ui teal basic left pointing label mini">8月1号</div>
+                    </span>
+                    <div class="ui violet basic right middle label">原创</div>
+                </a>
+                <a href="#" target="_blank" class="item">
+                    <span>
+                        <i class="small teal circle icon"></i>Spring 循环依赖？一个例子理解它
+                        <div class="ui teal basic left pointing label mini">7月15号</div>
+                    </span>
+                    <div class="ui violet basic right label">原创</div>
+                </a>
+                <a href="#" target="_blank" class="item">
+                    <span>
+                        <i class="small teal circle icon"></i>.....
+                    </span>
+                </a>
+            </div>
+            <h2 class="ui center aligned header yellow">2019</h2>
+            <div class="ui fluid vertical menu">
+                <a href="#" target="_blank" class="item">
+                    <span>
+                        <i class="small teal circle icon"></i>SSM 框架搭建教程
+                        <div class="ui teal basic left pointing label mini">9月1号</div>
+                    </span>
+                    <div class="ui red basic right label">转载</div>
+                </a>
+                <a href="#" target="_blank" class="item">
+                    <span>
+                        <i class="small teal circle icon"></i>Java 多线程理解，三种创建线程方式.
+                        <div class="ui teal basic left pointing label mini">8月15号</div>
+                    </span>
+                    <div class="ui violet basic right label">原创</div>
+                </a>
+                <a href="#" target="_blank" class="item">
+                    <span>
+                        <i class="small teal circle icon"></i>Tomcat 容器原理、生命周期解析
+                        <div class="ui teal basic left pointing label mini">8月1号</div>
+                    </span>
+                    <div class="ui violet basic right label">原创</div>
+                </a>
+                <a href="#" target="_blank" class="item">
+                    <span>
+                        <i class="small teal circle icon"></i>不懂 Java 反射？点进来看就懂了.
+                        <div class="ui teal basic left pointing label mini">7月15号</div>
+                    </span>
+                    <div class="ui red basic right label">转载</div>
+                </a>
+                <a href="#" target="_blank" class="item">
+                    <span>
+                        <i class="small teal circle icon"></i>.....
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!--底部footer-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/avatar.jpg" class="ui rounded image" alt="头像">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Java8 实战</a>
+                        <a href="#" class="item">JVM 内存模型</a>
+                        <a href="#" class="item">并发编程之 Re-entrantLock</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item"><i class="envelope icon"></i> Email：yudi1484@163.com</a>
+                        <a href="#" class="item"><i class="github icon"></i>Github：https://github.com/yudi-corgi</a>
+                    </div>
+                </div>
+                <div class="six wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">关于系统</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">这是一个简易的博客系统，可以针对文章、分类、标签、评论等模块内容进行管理，采用的是 SpringBoot + Spring Data JPA + Semantic UI 技术架构。</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020 YUDI Development By YUDI</p>
+        </div>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script type="text/javascript">
+    $('.menu.toggle').click(function(){
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+</script>
+</body>
+</html>
