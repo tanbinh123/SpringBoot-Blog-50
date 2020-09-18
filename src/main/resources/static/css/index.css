@@ -96,6 +96,10 @@ body{
     max-width: 60em !important;
     margin: auto !important;
 }
+.m-shadow-small{
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.8) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.8) !important;
+}
 
 /*---------------mobile---------------*/
 .m-mobile-show{
@@ -109,6 +113,10 @@ body{
         display: block !important;
     }
     .m-padded-lr-responsive {
+        padding-left: 0 !important;
+        padding-right:  0 !important;
+    }
+    .m-padded-lr-clear {
         padding-left: 0 !important;
         padding-right:  0 !important;
     }
