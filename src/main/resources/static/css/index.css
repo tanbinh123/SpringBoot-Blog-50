@@ -74,6 +74,9 @@ body{
 .m-text-thin{
     font-weight: 300 !important;
 }
+.m-text-bold{
+    font-weight: 600 !important;
+}
 .m-text-spaced{
     letter-spacing: 1px !important;
 }
