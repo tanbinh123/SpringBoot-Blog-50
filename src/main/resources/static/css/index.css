@@ -61,6 +61,9 @@ body{
 .m-margin-bottom-small{
     margin-bottom: 0.5em !important;
 }
+.m-margin-left-large{
+    margin-left: 4.2em;
+}
 
 /*----------text------------*/
 .m-text{
@@ -70,6 +73,9 @@ body{
 }
 .m-text-thin{
     font-weight: 300 !important;
+}
+.m-text-bold{
+    font-weight: 600 !important;
 }
 .m-text-spaced{
     letter-spacing: 1px !important;
@@ -100,7 +106,6 @@ body{
     -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.8) !important;
     box-shadow: 0 4px 8px rgba(0,0,0,0.8) !important;
 }
-
 /*---------------mobile---------------*/
 .m-mobile-show{
     display: none !important;
