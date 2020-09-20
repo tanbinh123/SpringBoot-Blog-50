@@ -68,8 +68,8 @@
                         <a href="#" id="wechat" class="ui circular icon button"><i class="weixin icon"></i> </a>
                         <a href="#" id="qq" class="ui circular icon button" data-content="1008611" data-position="bottom center"><i class="qq icon"></i> </a>
                     </div>
-                    <div id="wechatQR" class="ui flowing popup transition hidden" style="width: 150px">
-                        <img src="../static/images/avatar.jpg" alt="微信二维码" class="ui rounded image" style="width: 100%">
+                    <div id="wechatQR" class="ui flowing popup transition hidden m-padded-tiny" style="width: 150px !important;">
+                        <img src="../static/images/avatar.jpg" alt="微信二维码" class="ui rounded image" style="padding-top: 3px">
                     </div>
 
                 </div>
@@ -121,10 +121,13 @@
         $('.m-item').toggleClass('m-mobile-hide');
     });
 
+    //微信图片展示
     $('#wechat').popup({
         popup: $('#wechatQR'),
         position: 'bottom center'
     });
+
+    //QQ提示
     $('#qq').popup();
 
 </script>
