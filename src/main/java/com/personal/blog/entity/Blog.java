@@ -3,6 +3,7 @@ package com.personal.blog.entity;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * 博客实体类
@@ -13,6 +14,10 @@ import java.time.LocalDateTime;
 public class Blog {
 
     private Long id;
+    /** 分类ID */
+    private Long categoryId;
+    /** 标签ID */
+    private String tagIds;
     /** 标题 */
     private String title;
     /** 内容 */
@@ -35,6 +40,10 @@ public class Blog {
     private LocalDateTime createTime;
     /** 更新时间 */
     private LocalDateTime updateTime;
+    /** 类别 */
+    private Category category;
+    /** 标签 */
+    private List<Tag> tags;
 }
 
 

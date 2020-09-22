@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
 public class Comment {
 
     private Long id;
+    /** 父评论ID */
+    private Long parentId;
     /** 评论人名称 */
     private String nickName;
     /** 邮箱 */
