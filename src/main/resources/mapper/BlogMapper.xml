@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.personal.blog.mapper.BlogMapper">
+    <resultMap id="BlogResult" type="Blog">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="category_id" property="categoryId" />
+        <result column="tag_ids" property="tagIds" />
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="first_picture" property="firstPicture" />
+        <result column="flag" property="flag" />
+        <result column="appreciation" property="appreciation" />
+        <result column="share_statement" property="shareStatement" />
+        <result column="comment_able" property="commentAble" />
+        <result column="published" property="published" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <association property="category" column="category_id" javaType="Category" resultMap="CategoryResult" />
+        <collection  property="tags" javaType="java.util.List" resultMap="TagResult" />
+    </resultMap>
+    
+    <resultMap id="CategoryResult" type="Category">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <resultMap id="TagResult" type="Tag">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+    
+    <sql id="selectBlogVo">
+        select
+            b.id, b.user_id, b.category_id, b.tag_ids, b.title, b.content,
+            b.first_picture, b.flag, b.appreciation, b.share_statement,
+            b.comment_able, b.published, b.create_time, b.update_time,
+            c.id, c.name, c.create_time, c.update_time,
+            t.id, t.name, t.create_time, t.update_time
+        from blog b
+        left join Category c on c.id = b.category_id
+        left join Tag t on FIND_IN_SET(t.id,b.tag_ids)
+    </sql>
+</mapper>

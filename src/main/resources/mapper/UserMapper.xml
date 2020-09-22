@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.personal.blog.mapper.UserMapper">
+    <resultMap id="UserResult" type="User">
+        <id column="id" property="id" />
+        <result column="user_name" property="userName" />
+        <result column="user_type" property="userType" />
+        <result column="login_name" property="loginName" />
+        <result column="password" property="password" />
+        <result column="salt" property="salt" />
+        <result column="sex" property="sex" />
+        <result column="email" property="email" />
+        <result column="avatar" property="avatar" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <sql id="selectUserVo">
+        select * from user
+    </sql>
+</mapper>
