@@ -36,6 +36,12 @@ body{
     padding-top: 2em !important;
     padding-bottom: 2em !important;
 }
+
+.m-padded-tb-exBig{
+    padding-top: 2.54em !important;
+    padding-bottom: 2.54em !important;
+}
+
 .m-padded-tb-huge{
     padding-top: 3em !important;
     padding-bottom: 3em !important;

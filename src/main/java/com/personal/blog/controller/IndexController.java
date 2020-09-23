@@ -1,10 +1,7 @@
 package com.personal.blog.controller;
 
-import com.personal.blog.exception.NotFoundException;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * 首页Controller
@@ -14,9 +11,33 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class IndexController {
 
-    @GetMapping("/{id}/{name}")
-    public String index(@PathVariable String id, @PathVariable String name){
+    @GetMapping("")
+    public String index(){
         return "index";
     }
 
+    @GetMapping("/blog")
+    public String blog(){
+        return "blog";
+    }
+
+    @GetMapping("/about")
+    public String about(){
+        return "about";
+    }
+
+    @GetMapping("/category")
+    public String category(){
+        return "category";
+    }
+
+    @GetMapping("/tags")
+    public String tags(){
+        return "tags";
+    }
+
+    @GetMapping("/archives")
+    public String archives(){
+        return "archives";
+    }
 }

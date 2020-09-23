@@ -1,35 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head(~{::title})">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>标签</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <link rel="stylesheet" href="../static/css/index.css">
 </head>
 <body>
-    <!--导航-->
-    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
-        <div class="ui container">
-            <div class="ui inverted secondary stackable menu">
-                <h2 class="ui teal header item">Blog</h2>
-                <a href="#" class="m-item item m-mobile-hide"><i class="small home icon"></i>首页 </a>
-                <a href="#" class="m-item item m-mobile-hide"><i class="small idea icon"></i>分类</a>
-                <a href="#" class="active m-item item m-mobile-hide"><i class="small tags icon"></i>标签</a>
-                <a href="#" class="m-item item m-mobile-hide"><i class="small clone icon"></i>归档</a>
-                <a href="#" class="m-item item m-mobile-hide"><i class="small info icon"></i>关于我</a>
-                <div class="m-item right item m-mobile-hide">
-                    <div class="ui inverted transparent input">
-                        <input type="text" placeholder="Search...">
-                        <i class="search link icon"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a href="#" class="menu toggle ui black icon button m-right-top m-mobile-show">
-            <i class="sidebar icon"></i>
-        </a>
-    </nav>
+    <!-- 导航：引用通用片段 -->
+    <nav th:replace="fragments :: navigation(3)"></nav>
 
     <!--中间内容-->
     <div class="m-container m-padded-tb-big">
@@ -313,12 +290,14 @@
             <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2020 YUDI Development By YUDI</p>
         </div>
     </footer>
+</body>
+<!--/*/<th:block th:replace="fragments :: script">/*/-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
 <script type="text/javascript">
     $('.menu.toggle').click(function(){
         $('.m-item').toggleClass('m-mobile-hide');
     });
 </script>
-</body>
 </html>

@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Data
 public class Tag {
 
-    private long id;
+    private Long id;
     /** 分类名称 */
     private String name;
     /** 创建时间 */
