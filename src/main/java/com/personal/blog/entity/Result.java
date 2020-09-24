@@ -49,7 +49,7 @@ public class Result<T>  {
      * 请求成功
      * @return
      */
-    public static Result<Void> success(){
+    public static <T> Result<T> success(){
         return new Result<>(ResultStatus.SUCCESS,null);
     }
 

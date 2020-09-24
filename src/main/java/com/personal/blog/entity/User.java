@@ -1,5 +1,6 @@
 package com.personal.blog.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -14,7 +15,7 @@ public class User {
 
     private Long id;
     /** 名称 */
-    private String username;
+    private String userName;
     /** 用户类型 */
     private Integer userType;
     /** 账号 */
@@ -28,8 +29,10 @@ public class User {
     /** 头像 */
     private String avatar;
     /** 创建时间 */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
     /** 更新时间 */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updateTime;
 }
 
