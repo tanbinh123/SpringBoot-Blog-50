@@ -11,8 +11,8 @@
     <br>
     <br>
     <div class="m-container-small m-padded-tb-massive">
-        <div class="ui error message m-padded-tb-exBig">
-            <h1>错误：未知错误，请联系系统管理员</h1>
+        <div class="ui error message" style="padding-top: 3.24em !important;padding-bottom: 3.24em !important;">
+            <h2><span th:text="${exception.message}" >未知错误</span>，请联系管理员</h2>
             <div>
                 <div th:utext="'&lt;!--'" th:remove="tag"></div>
                 <div th:utext="'Failed Request URL:'+${url}" th:remove="tag"></div>

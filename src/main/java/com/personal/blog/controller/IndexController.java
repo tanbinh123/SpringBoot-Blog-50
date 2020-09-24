@@ -1,5 +1,6 @@
 package com.personal.blog.controller;
 
+import com.personal.blog.exception.BusinessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -12,8 +13,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class IndexController {
 
     @GetMapping("")
-    public String index(){
-        return "index";
+    public String index () throws Exception {
+        throw new BusinessException("业务异常");
+        // return "index";
     }
 
     @GetMapping("/blog")
