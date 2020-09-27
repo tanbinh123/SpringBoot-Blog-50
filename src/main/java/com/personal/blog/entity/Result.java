@@ -45,6 +45,10 @@ public class Result<T>  {
     public Result() {
     }
 
+    public static Result<Void> toAjax(Boolean result){
+        return result ? success() : failure();
+    }
+
     /**
      * 请求成功
      * @return

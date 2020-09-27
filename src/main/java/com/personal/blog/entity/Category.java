@@ -1,5 +1,8 @@
 package com.personal.blog.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -16,7 +19,10 @@ public class Category {
     /** 分类名称 */
     private String name;
     /** 创建时间 */
+    @TableField(fill = FieldFill.INSERT)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
+    @TableField(fill = FieldFill.UPDATE)
     /** 更新时间 */
     private LocalDateTime updateTime;
 

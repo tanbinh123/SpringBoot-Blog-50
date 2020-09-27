@@ -1,5 +1,6 @@
 package com.personal.blog.controller.admin;
 
+import cn.hutool.crypto.digest.DigestUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.personal.blog.entity.User;
 import com.personal.blog.service.UserService;
@@ -45,7 +46,7 @@ public class LoginController {
                         @RequestParam("password") String password,
                         HttpSession session, RedirectAttributes redirectAttributes){
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("login_name",loginName).eq("password",password);
+        queryWrapper.eq("login_name",loginName).eq("password",DigestUtil.md5Hex(password));
         User user = userService.getOne(queryWrapper);
         if (user != null) {
             user.setPassword(null);
@@ -67,6 +68,7 @@ public class LoginController {
         session.removeAttribute("user");
         return "redirect:/admin";
     }
+
 }
 
 

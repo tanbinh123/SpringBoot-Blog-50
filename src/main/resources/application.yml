@@ -10,6 +10,8 @@ spring:
     mode: HTML
     encoding: UTF-8
     cache: false
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
 
 # 开发环境配置
 server:
@@ -33,6 +35,10 @@ mybatis-plus:
     default-executor-type: reuse
     # 指定 MyBatis 所用日志的具体实现
     log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+  global-config:
+    db-config:
+      # 数据库 ID 自增
+      id-type: auto
 # 日志配置
 logging:
   level:
